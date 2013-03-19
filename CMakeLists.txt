@@ -46,6 +46,7 @@ cube_20k
 double_pendulum_with_base
 dumpster
 fast_food
+fire_hose_long
 gas_station
 ground_plane
 hammer
