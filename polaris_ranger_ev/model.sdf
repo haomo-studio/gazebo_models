@@ -18,6 +18,10 @@
         <geometry>
           <mesh>
             <uri>model://polaris_ranger_ev/meshes/polaris.dae</uri>
+            <submesh>
+              <name>Ranger</name>
+              <center>false</center>
+            </submesh>
           </mesh>
         </geometry>
         <material>
@@ -77,10 +81,10 @@
         </geometry>
       </collision>
       <collision name="seat">
-        <pose>-0.1 0.0 0.625 0.0 0.0 0.0</pose> 
+        <pose>-0.1 0.0 0.585 0.0 0.0 0.0</pose> 
         <geometry>
           <box>
-            <size>0.6 1.0 0.65</size>
+            <size>0.6 1.0 0.55</size>
           </box>
         </geometry>
       </collision>
@@ -88,7 +92,7 @@
         <pose>-0.3 0.0 1.125 0.0 -0.2 0.0</pose> 
         <geometry>
           <box>
-            <size>0.1 1.0 0.4</size>
+            <size>0.06 1.0 0.4</size>
           </box>
         </geometry>
       </collision>
@@ -100,8 +104,192 @@
           </box>
         </geometry>
       </collision>
-      <collision name="steering_column">
-        <pose>0.525 0.3 1.025 0.0 -0.8 0.0</pose> 
+      <!-- Begin simple collision shapes for entry/exit handles -->
+      <collision name="handle_left_top">
+        <pose>-0.23 0.61 1.175  0 -1.32 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.015</radius>
+            <length>0.25</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="handle_left_bottom">
+        <pose>-0.20 0.61 0.98  0 -1.40 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.015</radius>
+            <length>0.25</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="handle_left_middle">
+        <pose>-0.10 0.61 1.055  0 -0.20 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.20</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="handle_right_top">
+        <pose>-0.23 -0.61 1.175  0 -1.32 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.015</radius>
+            <length>0.25</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="handle_right_bottom">
+        <pose>-0.20 -0.61 0.98  0 -1.40 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.015</radius>
+            <length>0.25</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="handle_right_middle">
+        <pose>-0.10 -0.61 1.055  0 -0.20 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.20</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <!-- End simple collision shapes for entry/exit handles -->
+      <!-- Begin simple collision shapes for roll cage -->
+      <collision name="rollcage_top_left">
+        <pose>0.0 0.61 1.92  0 1.61 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>0.68</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="rollcage_top_right">
+        <pose>0.0 -0.61 1.92  0 1.61 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>0.68</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="rollcage_top_front">
+        <pose>0.325 0.0 1.89  1.570796 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>1.22</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="rollcage_top_back">
+        <pose>-0.330 0.0 1.92  1.570796 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>1.22</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="rollcage_front_left">
+        <pose>0.54 0.61 1.45  0 -0.44 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>1.04</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="rollcage_front_right">
+        <pose>0.54 -0.61 1.45  0 -0.44 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>1.04</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="rollcage_back_left">
+        <pose>-0.37 0.61 1.25  0 -0.14 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>0.90</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="rollcage_back_right">
+        <pose>-0.37 -0.61 1.25  0 -0.14 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>0.90</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="rollcage_back_midleft">
+        <pose>-0.37 0.155 1.25  0 -0.14 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.023</radius>
+            <length>0.90</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="rollcage_back_midright">
+        <pose>-0.37 -0.155 1.25  0 -0.14 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.023</radius>
+            <length>0.90</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="rollcage_back_upper_left">
+        <pose>-0.38 0.61 1.82  0 0.40 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>0.29</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="rollcage_back_upper_right">
+        <pose>-0.38 -0.61 1.82  0 0.40 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.03</radius>
+            <length>0.29</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="rollcage_back_upper_midleft">
+        <pose>-0.38 0.155 1.82  0 0.40 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.023</radius>
+            <length>0.29</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name="rollcage_back_upper_midright">
+        <pose>-0.38 -0.155 1.82  0 0.40 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.023</radius>
+            <length>0.29</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <!-- End simple collision shapes for roll cage -->
+      <!--<collision name="steering_column">
+        <pose>0.525 0.3 1.125 0.0 -0.8 0.0</pose> 
         <geometry>
           <cylinder>
             <radius>0.05</radius>
@@ -109,7 +297,23 @@
           </cylinder>
         </geometry>
       </collision>
-   </link>
+      <visual name="steering_column_visual">
+        <pose>0.525 0.3 1.125 0.0 -0.8 0.0</pose> 
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.45</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Black</name>
+          </script>
+        </material>
+      </visual>
+-->
+    </link>
     <link name="rear_right_wheel">
       <pose>-0.85 -0.6 0.32 1.570796 0.0 0.0</pose>
       <inertial>
@@ -138,19 +342,27 @@
           </friction>
         </surface>
       </collision>
+      <visual name="visual">
+        <!-- rotate mesh to get to X-forward -->
+        <pose>0 0 0 0 -1.570796 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://polaris_ranger_ev/meshes/polaris.dae</uri>
+            <submesh>
+              <name>Rear_Wheel_Right</name>
+              <center>true</center>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://polaris_ranger_ev/materials/scripts</uri>
+            <uri>model://polaris_ranger_ev/materials/textures</uri>
+            <name>Polaris/Diffuse</name>
+          </script>
+        </material>
+      </visual>
     </link>
-    <joint type="revolute" name="rear_right_wheel_joint">
-      <pose>0.0 0.0 -0.1 0 0 0</pose>
-      <child>rear_right_wheel</child>
-      <parent>chassis</parent>
-      <axis>
-        <xyz>0 1 0</xyz>
-      </axis>
-      <physics><ode><limit>
-        <cfm>0.000000</cfm>
-        <erp>0.900000</erp>
-      </limit></ode></physics>
-    </joint>
     <link name="rear_left_wheel">
       <pose>-0.85 0.6 0.32 1.570796 0.0 0.0</pose>
       <inertial>
@@ -179,18 +391,29 @@
           </friction>
         </surface>
       </collision>
+
+      <visual name="visual">
+        <!-- rotate mesh to get to X-forward -->
+        <pose>0 0 0 0 -1.570796 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://polaris_ranger_ev/meshes/polaris.dae</uri>
+            <submesh>
+              <name>Rear_Wheel_Left</name>
+              <center>true</center>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://polaris_ranger_ev/materials/scripts</uri>
+            <uri>model://polaris_ranger_ev/materials/textures</uri>
+            <name>Polaris/Diffuse</name>
+          </script>
+        </material>
+      </visual>
     </link>
-    <joint type="revolute" name="rear_left_wheel_joint">
-      <child>rear_left_wheel</child>
-      <parent>chassis</parent>
-      <axis>
-        <xyz>0 1 0</xyz>
-      </axis>
-      <physics><ode><limit>
-        <cfm>0.000000</cfm>
-        <erp>0.900000</erp>
-      </limit></ode></physics>
-    </joint>
+
     <link name="front_right_wheel">
       <pose>1.03 -0.6 0.32 1.570796 0.0 0.0</pose>
       <inertial>
@@ -219,7 +442,28 @@
           </friction>
         </surface>
       </collision>
+
+      <visual name="visual">
+        <pose>0 0 0 0 -1.570796 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://polaris_ranger_ev/meshes/polaris.dae</uri>
+            <submesh>
+              <name>Front_Wheel_Right</name>
+              <center>true</center>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://polaris_ranger_ev/materials/scripts</uri>
+            <uri>model://polaris_ranger_ev/materials/textures</uri>
+            <name>Polaris/Diffuse</name>
+          </script>
+        </material>
+      </visual>
     </link>
+
     <link name="front_right_wheel_steering_block">
       <pose>1.03 -0.5 0.32 1.570796 0.0 0.0</pose>
       <inertial>
@@ -239,32 +483,6 @@
         </geometry>
       </collision>
     </link>
-    <joint type="revolute" name="front_right_steering_joint">
-      <child>front_right_wheel_steering_block</child>
-      <parent>chassis</parent>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <lower>-1.0</lower>
-          <upper>1.0</upper>
-        </limit>
-      </axis>
-      <physics><ode><limit>
-        <cfm>0.000000</cfm>
-        <erp>0.900000</erp>
-      </limit></ode></physics>
-    </joint>
-    <joint type="revolute" name="front_right_wheel_joint">
-      <child>front_right_wheel</child>
-      <parent>front_right_wheel_steering_block</parent>
-      <axis>
-        <xyz>0 1 0</xyz>
-      </axis>
-      <physics><ode><limit>
-        <cfm>0.000000</cfm>
-        <erp>0.900000</erp>
-      </limit></ode></physics>
-    </joint>
     <link name="front_left_wheel">
       <pose>1.03 0.6 0.32 1.570796 0.0 0.0</pose>
       <inertial>
@@ -293,6 +511,25 @@
           </friction>
         </surface>
       </collision>
+      <visual name="visual">
+        <pose>0 0 0 0 -1.570796 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://polaris_ranger_ev/meshes/polaris.dae</uri>
+            <submesh>
+              <name>Front_Wheel_Left</name>
+              <center>true</center>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://polaris_ranger_ev/materials/scripts</uri>
+            <uri>model://polaris_ranger_ev/materials/textures</uri>
+            <name>Polaris/Diffuse</name>
+          </script>
+        </material>
+      </visual>
     </link>
     <link name="front_left_wheel_steering_block">
       <pose>1.03 0.5 0.32 1.570796 0.0 0.0</pose>
@@ -313,35 +550,9 @@
         </geometry>
       </collision>
     </link>
-    <joint type="revolute" name="front_left_steering_joint">
-      <child>front_left_wheel_steering_block</child>
-      <parent>chassis</parent>
-      <axis>
-        <xyz>0 0 1</xyz>
-        <limit>
-          <lower>-1.0</lower>
-          <upper>1.0</upper>
-        </limit>
-      </axis>
-      <physics><ode><limit>
-        <cfm>0.000000</cfm>
-        <erp>0.900000</erp>
-      </limit></ode></physics>
-    </joint>
-    <joint type="revolute" name="front_left_wheel_joint">
-      <child>front_left_wheel</child>
-      <parent>front_left_wheel_steering_block</parent>
-      <axis>
-        <xyz>0 1 0</xyz>
-      </axis>
-      <physics><ode><limit>
-        <cfm>0.000000</cfm>
-        <erp>0.900000</erp>
-      </limit></ode></physics>
-    </joint>
     <!-- gas/brake pedals, steering wheel and hand brake -->
     <link name='gas_pedal'>
-      <pose>0.53 0.14 0.56 0 -1.0 0</pose>
+      <pose>0.53 0.14 0.56 0 0 0</pose>
       <gravity>false</gravity>
       <inertial>
         <mass>0.1</mass>
@@ -356,34 +567,38 @@
         </inertia>
       </inertial>
       <collision name='gas_pedal_collision'>
+        <pose>-0.0385 0 -0.086 0 2.016 0</pose>
         <geometry>
           <box>
-            <size>0.120000 0.070000 0.030000</size>
+            <size>0.1069000 0.0770000 0.010000</size>
           </box>
         </geometry>
       </collision>
-      <visual name='gas_pedal_visual'>
+      <visual name="visual">
+        <!-- rotate mesh to get to X-forward -->
+        <pose>0 0 0 0 0 -1.5707</pose>
         <geometry>
-          <box>
-            <size>0.120000 0.070000 0.030000</size>
-          </box>
+          <mesh>
+            <uri>model://polaris_ranger_ev/meshes/polaris.dae</uri>
+            <submesh>
+              <name>Pedal_Gas</name>
+              <center>true</center>
+            </submesh>
+          </mesh>
         </geometry>
         <material>
           <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
+            <uri>model://polaris_ranger_ev/materials/scripts</uri>
+            <uri>model://polaris_ranger_ev/materials/textures</uri>
+            <name>Polaris/Diffuse</name>
           </script>
-          <ambient>0.2 0.2 0.2 1</ambient>
-          <diffuse>0.2 0.2 0.2 1</diffuse>
-          <specular>0.2 0.2 0.2 1</specular>
-          <emissive>0.5 0.5 0.5 1</emissive>
         </material>
       </visual>
     </link>
 
     <link name='brake_pedal'>
       <gravity>false</gravity>
-      <pose>0.54 0.27 0.58 0 -1.0 0</pose>
+      <pose>0.54 0.27 0.58 0 0 0</pose>
       <inertial>
         <mass>0.1</mass>
         <pose>0 0 0 0 0 0</pose>
@@ -397,33 +612,37 @@
         </inertia>
       </inertial>
       <collision name='brake_pedal_collision'>
+        <pose>-0.040 0 -0.086 0 1.999 0</pose>
         <geometry>
           <box>
-            <size>0.06 0.08 0.03</size>
+            <size>0.063 0.08 0.01</size>
           </box>
         </geometry>
       </collision>
-      <visual name='brake_pedal_visual'>
+      <visual name="visual">
+        <!-- rotate mesh to get to X-forward -->
+        <pose>0 0 0 0 0 -1.5707</pose>
         <geometry>
-          <box>
-            <size>0.060000 0.080000 0.030000</size>
-          </box>
+          <mesh>
+            <uri>model://polaris_ranger_ev/meshes/polaris.dae</uri>
+            <submesh>
+              <name>Pedal_brake</name>
+              <center>true</center>
+            </submesh>
+          </mesh>
         </geometry>
         <material>
           <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Wood</name>
+            <uri>model://polaris_ranger_ev/materials/scripts</uri>
+            <uri>model://polaris_ranger_ev/materials/textures</uri>
+            <name>Polaris/Diffuse</name>
           </script>
-          <ambient>0.2 0.2 0.2 1</ambient>
-          <diffuse>0.2 0.2 0.2 1</diffuse>
-          <specular>0.2 0.2 0.2 1</specular>
-          <emissive>0.5 0.5 0.5 1</emissive>
         </material>
       </visual>
     </link>
 
     <link name='steering_wheel'>
-      <pose>0.37 0.30 1.2  0 -0.8 0</pose> 
+      <pose>0.37 0.30 1.3  0 -0.8 0</pose> 
       <inertial>
         <mass>1.0</mass>
         <pose>0 0 0 0 0 0</pose>
@@ -436,75 +655,45 @@
           <izz>1.0</izz>
         </inertia>
       </inertial>
-      <collision name="steering_wheel_post_left">
-        <pose>0.0 0.08 0.0  1.570796 0 0</pose> 
-        <geometry>
-          <cylinder>
-            <radius>0.02</radius>
-            <length>0.15</length>
-          </cylinder>
-        </geometry>
-      </collision>
-      <collision name="steering_wheel_post_right">
-        <pose>0.0 -0.08 0.0  1.570796 0 0</pose> 
-        <geometry>
-          <cylinder>
-            <radius>0.02</radius>
-            <length>0.15</length>
-          </cylinder>
-        </geometry>
-      </collision>
-      <collision name="steering_wheel_post_middle">
-        <pose>-0.08 0.0 0.0 0 1.570796 0</pose> 
-        <geometry>
-          <cylinder>
-            <radius>0.02</radius>
-            <length>0.15</length>
-          </cylinder>
-        </geometry>
-      </collision>
-      <collision name="collision00">
-        <pose>0.150000 0.000000 0  0 1.570796 1.570796</pose>
-        <geometry><cylinder><length>0.105065778087</length><radius>0.01</radius></cylinder></geometry>
-      </collision>
-      <collision name="collision01">
-        <pose>0.121353 0.088168 0  0 1.570796 2.199115</pose>
-        <geometry><cylinder><length>0.105065778087</length><radius>0.01</radius></cylinder></geometry>
-      </collision>
-      <collision name="collision02">
-        <pose>0.046353 0.142658 0  0 1.570796 2.827433</pose>
-        <geometry><cylinder><length>0.105065778087</length><radius>0.01</radius></cylinder></geometry>
-      </collision>
-      <collision name="collision03">
-       <pose>-0.046353 0.142658 0  0 1.570796 3.455752</pose>
-        <geometry><cylinder><length>0.105065778087</length><radius>0.01</radius></cylinder></geometry>
-      </collision>
-      <collision name="collision04">
-        <pose>-0.121353 0.088168 0  0 1.570796 4.084070</pose>
-        <geometry><cylinder><length>0.105065778087</length><radius>0.01</radius></cylinder></geometry>
-      </collision>
-      <collision name="collision05">
-        <pose>-0.150000 0.000000 0  0 1.570796 4.712389</pose>
-        <geometry><cylinder><length>0.105065778087</length><radius>0.01</radius></cylinder></geometry>
-      </collision>
-      <collision name="collision06">
-        <pose>-0.121353 -0.088168 0  0 1.570796 5.340708</pose>
-        <geometry><cylinder><length>0.105065778087</length><radius>0.01</radius></cylinder></geometry>
-      </collision>
-      <collision name="collision07">
-        <pose>-0.046353 -0.142658 0  0 1.570796 5.969026</pose>
-        <geometry><cylinder><length>0.105065778087</length><radius>0.01</radius></cylinder></geometry>
-      </collision>
-      <collision name="collision08">
-        <pose>0.046353 -0.142658 0  0 1.570796 6.597345</pose>
-        <geometry><cylinder><length>0.105065778087</length><radius>0.01</radius></cylinder></geometry>
-      </collision>
-      <collision name="collision09">
-        <pose>0.121353 -0.088168 0  0 1.570796 7.225663</pose>
-        <geometry><cylinder><length>0.105065778087</length><radius>0.01</radius></cylinder></geometry>
-      </collision>
+
       <velocity_decay>0.1</velocity_decay>
+
+      <collision name="collision">
+        <!-- rotate mesh to get to X-forward -->
+        <pose>0 0 0 -0.8 0 -1.570796</pose>
+        <geometry>
+          <mesh>
+            <uri>model://polaris_ranger_ev/meshes/polaris.dae</uri>
+            <submesh>
+              <name>Steering_Wheel</name>
+              <center>true</center>
+            </submesh>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <!-- rotate mesh to get to X-forward -->
+        <pose>0 0 0 -0.8 0 -1.570796</pose>
+        <geometry>
+          <mesh>
+            <uri>model://polaris_ranger_ev/meshes/polaris.dae</uri>
+            <submesh>
+              <name>Steering_Wheel</name>
+              <center>true</center>
+            </submesh>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://polaris_ranger_ev/materials/scripts</uri>
+            <uri>model://polaris_ranger_ev/materials/textures</uri>
+            <name>Polaris/Diffuse</name>
+          </script>
+        </material>
+      </visual>
     </link>
+
     <link name='hand_brake'>
       <pose>0.50 0.00 1.05 0.0 3.2 0.0</pose> 
       <inertial>
@@ -544,6 +733,76 @@
         </material>
       </visual>
     </link>
+
+    <joint type="revolute" name="front_left_steering_joint">
+      <child>front_left_wheel_steering_block</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.0</lower>
+          <upper>1.0</upper>
+        </limit>
+      </axis>
+      <physics><ode><limit>
+        <cfm>0.000000</cfm>
+        <erp>0.900000</erp>
+      </limit></ode></physics>
+    </joint>
+    <joint type="revolute" name="front_left_wheel_joint">
+      <child>front_left_wheel</child>
+      <parent>front_left_wheel_steering_block</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+      <physics><ode><limit>
+        <cfm>0.000000</cfm>
+        <erp>0.900000</erp>
+      </limit></ode></physics>
+    </joint>
+
+    <joint type="revolute" name="front_right_steering_joint">
+      <child>front_right_wheel_steering_block</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.0</lower>
+          <upper>1.0</upper>
+        </limit>
+      </axis>
+      <physics><ode><limit>
+        <cfm>0.000000</cfm>
+        <erp>0.900000</erp>
+      </limit></ode></physics>
+    </joint>
+
+    <joint type="revolute" name="front_right_wheel_joint">
+      <child>front_right_wheel</child>
+      <parent>front_right_wheel_steering_block</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+      <physics><ode><limit>
+        <cfm>0.000000</cfm>
+        <erp>0.900000</erp>
+      </limit></ode></physics>
+    </joint>
+
+
+    <joint type="revolute" name="rear_left_wheel_joint">
+      <child>rear_left_wheel</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+      <physics><ode><limit>
+        <cfm>0.000000</cfm>
+        <erp>0.900000</erp>
+      </limit></ode></physics>
+    </joint>
+
+
     <joint name='gas_joint' type='prismatic'>
       <parent>chassis</parent>
       <child>gas_pedal</child>
@@ -589,5 +848,19 @@
         </limit>
       </axis>
     </joint>
+
+    <joint type="revolute" name="rear_right_wheel_joint">
+      <pose>0.0 0.0 -0.1 0 0 0</pose>
+      <child>rear_right_wheel</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+      </axis>
+      <physics><ode><limit>
+        <cfm>0.000000</cfm>
+        <erp>0.900000</erp>
+      </limit></ode></physics>
+    </joint>
+
   </model>
 </sdf>
