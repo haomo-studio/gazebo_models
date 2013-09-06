@@ -21,12 +21,15 @@ brick_box_3x1x3
 cabinet
 camera
 cinder_block
+cinder_block_2
+cinder_block_wide
 coke_can
 construction_barrel
 construction_cone
 cordless_drill
 create
 cube_20k
+door_handle
 double_pendulum_with_base
 drc_practice_2x4
 drc_practice_2x6
@@ -53,6 +56,7 @@ drc_practice_wheel_valve_large
 drc_practice_wheel_valve_large_wall
 drc_practice_wheel_valve_wall
 drc_practice_white_jersey_barrier
+drc_practice_wood_slats
 drc_practice_yellow_parking_block
 dumpster
 fast_food
@@ -107,13 +111,19 @@ youbot
 
 set (MODEL_URI_LIST "" CACHE INTERNAL "Model URI List" FORCE)
 
+# Convert install prefix to an absolute path, to support the common case of 
+# doing this (which otherwise will fail during the install):`
+#   cmake -DCMAKE_INSTALL_PREFIX=~/.gazebo ..
+get_filename_component(CMAKE_INSTALL_PREFIX_ABSOLUTE ${CMAKE_INSTALL_PREFIX} 
+  ABSOLUTE)
+
 foreach (dir ${dirs})
   add_custom_target(${dir} ALL COMMAND mkdir -p ${PROJECT_BINARY_DIR}/${dir}
     COMMAND tar czvf ${PROJECT_BINARY_DIR}/${dir}/model.tar.gz ../${dir})
 
-  install (DIRECTORY ${dir} DESTINATION ${CMAKE_INSTALL_PREFIX}/models)
+  install (DIRECTORY ${dir} DESTINATION ${CMAKE_INSTALL_PREFIX_ABSOLUTE}/models)
   install (FILES ${PROJECT_BINARY_DIR}/${dir}/model.tar.gz DESTINATION
-    ${CMAKE_INSTALL_PREFIX}/models/${dir})
+    ${CMAKE_INSTALL_PREFIX_ABSOLUTE}/models/${dir})
   set(MODEL_URI_LIST "${MODEL_URI_LIST}<uri>file://${dir}</uri>\n")
 endforeach ()
 
@@ -121,15 +131,15 @@ configure_file("${CMAKE_SOURCE_DIR}/manifest.xml.in"
                "${PROJECT_BINARY_DIR}/manifest.xml")
 
 install (FILES "${PROJECT_BINARY_DIR}/manifest.xml" DESTINATION
-         ${CMAKE_INSTALL_PREFIX}/models/)
+         ${CMAKE_INSTALL_PREFIX_ABSOLUTE}/models/)
 
 configure_file("${CMAKE_SOURCE_DIR}/database.config.in"
                "${PROJECT_BINARY_DIR}/database.config")
 
 install (FILES "${PROJECT_BINARY_DIR}/database.config" DESTINATION
-         ${CMAKE_INSTALL_PREFIX}/models/)
+         ${CMAKE_INSTALL_PREFIX_ABSOLUTE}/models/)
 
-message (STATUS "Install path: ${CMAKE_INSTALL_PREFIX}/models")
+message (STATUS "Install path: ${CMAKE_INSTALL_PREFIX_ABSOLUTE}/models")
 
 # This must always be last!
 include(CPack)
