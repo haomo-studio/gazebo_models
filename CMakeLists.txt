@@ -61,6 +61,8 @@ drc_practice_yellow_parking_block
 dumpster
 fast_food
 fire_hose_long
+fire_hose_long_curled
+fire_hydrant
 gas_station
 grey_wall
 ground_plane
@@ -91,6 +93,7 @@ pioneer2dx
 pioneer3at
 polaris_ranger_ev
 polaris_ranger_xp900
+polaris_ranger_xp900_no_roll_cage
 powerplant
 pr2
 pr2_gripper
