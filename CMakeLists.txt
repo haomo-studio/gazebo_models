@@ -114,6 +114,7 @@ stereo_camera
 stop_sign
 sun
 table
+table_marble
 turtlebot
 utility_cart
 willowgarage
