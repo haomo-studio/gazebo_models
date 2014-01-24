@@ -94,9 +94,13 @@ pioneer2dx
 pioneer3at
 polaris_ranger_ev
 polaris_ranger_xp900
+polaris_ranger_xp900_no_roll_cage
 powerplant
 pr2
 pr2_gripper
+robocup_3Dsim_ball
+robocup_3Dsim_field
+robocup_3Dsim_goal
 robocup_spl_ball
 robocup09_spl_field
 robocup14_spl_field
@@ -111,6 +115,7 @@ stereo_camera
 stop_sign
 sun
 table
+table_marble
 turtlebot
 utility_cart
 willowgarage
@@ -119,10 +124,10 @@ youbot
 
 set (MODEL_URI_LIST "" CACHE INTERNAL "Model URI List" FORCE)
 
-# Convert install prefix to an absolute path, to support the common case of 
+# Convert install prefix to an absolute path, to support the common case of
 # doing this (which otherwise will fail during the install):`
 #   cmake -DCMAKE_INSTALL_PREFIX=~/.gazebo ..
-get_filename_component(CMAKE_INSTALL_PREFIX_ABSOLUTE ${CMAKE_INSTALL_PREFIX} 
+get_filename_component(CMAKE_INSTALL_PREFIX_ABSOLUTE ${CMAKE_INSTALL_PREFIX}
   ABSOLUTE)
 
 foreach (dir ${dirs})
