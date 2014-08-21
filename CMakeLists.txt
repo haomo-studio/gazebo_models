@@ -29,6 +29,7 @@ construction_barrel
 construction_cone
 cordless_drill
 create
+cricket_ball
 cube_20k
 door_handle
 double_pendulum_with_base
@@ -75,6 +76,8 @@ house_2
 house_3
 husky
 irobot_hand
+iss
+iss_half
 jersey_barrier
 kinect
 kitchen_dining
@@ -94,13 +97,18 @@ pioneer2dx
 pioneer3at
 polaris_ranger_ev
 polaris_ranger_xp900
+polaris_ranger_xp900_no_roll_cage
 powerplant
 pr2
 pr2_gripper
+robocup_3Dsim_ball
+robocup_3Dsim_field
+robocup_3Dsim_goal
 robocup_spl_ball
 robocup09_spl_field
 robocup14_spl_field
 robocup14_spl_goal
+robonaut
 saucepan
 simple_arm
 simple_arm_gripper
@@ -111,18 +119,24 @@ stereo_camera
 stop_sign
 sun
 table
+table_marble
 turtlebot
 utility_cart
 willowgarage
+wood_block_10_2_1cm
+wood_cube_10cm
+wood_cube_2_5cm
+wood_cube_5cm
+wood_cube_7_5cm
 youbot
 )
 
 set (MODEL_URI_LIST "" CACHE INTERNAL "Model URI List" FORCE)
 
-# Convert install prefix to an absolute path, to support the common case of 
+# Convert install prefix to an absolute path, to support the common case of
 # doing this (which otherwise will fail during the install):`
 #   cmake -DCMAKE_INSTALL_PREFIX=~/.gazebo ..
-get_filename_component(CMAKE_INSTALL_PREFIX_ABSOLUTE ${CMAKE_INSTALL_PREFIX} 
+get_filename_component(CMAKE_INSTALL_PREFIX_ABSOLUTE ${CMAKE_INSTALL_PREFIX}
   ABSOLUTE)
 
 foreach (dir ${dirs})
