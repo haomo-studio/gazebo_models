@@ -1,27 +1,25 @@
 <?xml version="1.0" ?>
 <%
-  # Wood block with dimensions 10 x 2.5 x 1 cm
   # SI units (length in meters)
 
   # Geometry
-  dx = 0.1
-  dy = 0.025
-  dz = 0.01
-
-  # Material
-  # Assume soft wood with density of 500 kg / m^3
-  density = 500
+  # Height
+  h  = 0.08
+  # diameter
+  d = 0.0195
+  r = d/2.0
 
   # Inertia
-  mass = density * dx * dy * dz
-  ixx  = mass/12.0 * (dy**2 + dz**2)
-  iyy  = mass/12.0 * (dz**2 + dx**2)
-  izz  = mass/12.0 * (dx**2 + dy**2)
+  # TODO: weigh object and get mass
+  mass = 0.003
+  ixx  = mass/12.0 * 3*(r**2  + h**2 )
+  iyy  = mass/12.0 * 3*(r**2  + h**2 )
+  izz  = mass/2.0 * r**2
 %>
 <sdf version="1.5">
-  <model name="wood_block_10_2_1cm">
+  <model name="wooden_peg">
     <link name="link">
-      <pose>0 0 <%= dz/2 %> 0 0 0</pose>
+      <pose>0 0 <%= h/2 %> 0 0 0</pose>
       <inertial>
         <mass><%= mass %></mass>
         <inertia>
@@ -36,25 +34,20 @@
 
       <collision name="collision">
         <geometry>
-          <box>
-            <size><%= dx %> <%= dy %> <%= dz %></size>
-          </box>
+          #TODO: replace with mesh of a tube
+          <cylinder>
+            <radius> <%= r %> </radius>
+            <height> <%= h  %> </height>
+          </cylinder>
         </geometry>
-        <surface>
-          <contact>
-            <ode>
-              <max_vel>0.1</max_vel>
-              <min_depth>0.001</min_depth>
-            </ode>
-          </contact>
-        </surface>
       </collision>
 
       <visual name="visual">
         <geometry>
-          <box>
-            <size><%= dx %> <%= dy %> <%= dz %></size>
-          </box>
+          <cylinder>
+            <radius> <%= r %> </radius>
+            <height> <%= h  %> </height>
+          </cylinder>
         </geometry>
         <material>
           <script>

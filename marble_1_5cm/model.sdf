@@ -1,25 +1,24 @@
 <?xml version="1.0" ?>
-
 <sdf version="1.5">
-  <model name="cricket_ball">
+  <model name="marble_1_5cm">
     <link name="link">
-      <pose>0 0 0.0375 0 0 0</pose>
+      <pose>0 0 0.0075 0 0 0</pose>
       <inertial>
-        <mass>0.16</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>8.999999999999999e-05</ixx>
+          <ixx>2.25e-08</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>8.999999999999999e-05</iyy>
+          <iyy>2.25e-08</iyy>
           <iyz>0</iyz>
-          <izz>8.999999999999999e-05</izz>
+          <izz>2.25e-08</izz>
         </inertia>
       </inertial>
 
       <collision name="collision">
         <geometry>
           <sphere>
-            <radius>0.0375</radius>
+            <radius>0.0075</radius>
           </sphere>
         </geometry>
       </collision>
@@ -27,13 +26,13 @@
       <visual name="visual">
         <geometry>
           <sphere>
-            <radius>0.0375</radius>
+            <radius>0.0075</radius>
           </sphere>
         </geometry>
         <material>
           <script>
             <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Red</name>
+            <name>Gazebo/Blue</name>
           </script>
         </material>
       </visual>

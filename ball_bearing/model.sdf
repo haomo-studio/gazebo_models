@@ -1,25 +1,24 @@
 <?xml version="1.0" ?>
-
 <sdf version="1.5">
-  <model name="cricket_ball">
+  <model name="ball_bearing">
     <link name="link">
-      <pose>0 0 0.0375 0 0 0</pose>
+      <pose>0 0 0.003 0 0 0</pose>
       <inertial>
-        <mass>0.16</mass>
+        <mass>0.001</mass>
         <inertia>
-          <ixx>8.999999999999999e-05</ixx>
+          <ixx>3.6000000000000004e-09</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>8.999999999999999e-05</iyy>
+          <iyy>3.6000000000000004e-09</iyy>
           <iyz>0</iyz>
-          <izz>8.999999999999999e-05</izz>
+          <izz>3.6000000000000004e-09</izz>
         </inertia>
       </inertial>
 
       <collision name="collision">
         <geometry>
           <sphere>
-            <radius>0.0375</radius>
+            <radius>0.003</radius>
           </sphere>
         </geometry>
       </collision>
@@ -27,13 +26,13 @@
       <visual name="visual">
         <geometry>
           <sphere>
-            <radius>0.0375</radius>
+            <radius>0.003</radius>
           </sphere>
         </geometry>
         <material>
           <script>
             <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Red</name>
+            <name>Gazebo/Chrome</name>
           </script>
         </material>
       </visual>
