@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.5">
+  <model name="metal_peg_board">
+    <link name="link">
+      <pose>0 0 0.00523 0 0 0</pose>
+
+      <collision name="collision_base">
+        <geometry> <!-- base -->
+          <box>
+            <size>0.1016 0.3302 0.01046</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode>
+              <max_vel>0.1</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+      <visual name="visual_base">
+        <geometry>
+          <box>
+            <size>0.1016 0.3302 0.01046</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Wood</name>
+          </script>
+        </material>
+      </visual>
+
+    <!--<include>
+      <name>peg</name>
+      <uri>model://wooden_peg</uri>
+    </include>-->
+
+      
+
+    <collision name="collision_peg">
+      <pose>0 0.038 0.03623 0 0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius> 0.0033 </radius>
+          <length> 0.062 </length>
+        </cylinder>
+      </geometry>
+    </collision>
+
+
+    <visual name="visual_peg">
+      <pose>0 0.038 0.03623 0 0 0</pose>
+      <geometry>
+        <cylinder>
+          <radius> 0.0033 </radius>
+          <length> 0.062 </length>
+        </cylinder>
+      </geometry>
+      <material>
+        <script>
+          <uri>file://media/materials/scripts/gazebo.material</uri>
+          <name>Gazebo/Chrome</name>
+        </script>
+      </material>
+    </visual>
+
+
+    <inertial>
+      <pose>0.0254 0.10155 0.02073 0 0 0</pose>
+      <mass>0.2775</mass>
+      <inertia>
+        <ixx>0.0037031462385333333</ixx>
+        <ixy>0</ixy>
+        <ixz>0</ixz>
+        <iyy>0.0004870350097833333</iyy>
+        <iyz>0</iyz>
+        <izz>0.004049878447083334</izz>
+      </inertia>
+    </inertial>
+
+    </link>
+  </model>
+</sdf>
