@@ -1,185 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.5'>
   <model name='mpl_right_arm'>
-    <link name='shoulder'>
-      <pose>0 0 0.093285 0 5.55112e-17 -0.0115373</pose>
-      <inertial>
-        <pose>0.000536259 0.00200194 0.03328 0 0 0</pose>
-        <mass>0.0363799</mass>
-        <inertia>
-          <ixx>3.73005e-05</ixx>
-          <ixy>5.68571e-07</ixy>
-          <ixz>-7.59543e-07</ixz>
-          <iyy>2.60558e-05</iyy>
-          <iyz>-9.15512e-07</iyz>
-          <izz>3.86186e-05</izz>
-        </inertia>
-      </inertial>
-      <collision name='collision'>
-        <pose>0 0 0.0345 0 0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>0.03495</radius>
-          </sphere>
-        </geometry>
-        <surface>
-          <contact>
-            <ode>
-              <kp>100000</kp>
-              <kd>10</kd>
-              <max_vel>0.1</max_vel>
-              <min_depth>0.0015</min_depth>
-            </ode>
-          </contact>
-        </surface>
-      </collision>
-      <collision name='collision_1'>
-        <pose>0 0 0.01892 0 0 0</pose>
-        <geometry>
-          <cylinder>
-            <radius>0.038</radius>
-            <length>0.03784</length>
-          </cylinder>
-        </geometry>
-        <surface>
-          <contact>
-            <ode>
-              <kp>100000</kp>
-              <kd>10</kd>
-              <max_vel>0.1</max_vel>
-              <min_depth>0.0015</min_depth>
-            </ode>
-          </contact>
-        </surface>
-      </collision>
-      <visual name='visual'>
-        <geometry>
-          <mesh>
-            <uri>model://mpl_right_arm/meshes/shoulder.stl</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <script>
-            <name>Gazebo/FlatBlack</name>
-          </script>
-        </material>
-      </visual>
-    </link>
-
-    <link name='humerus'>
-      <pose>0.00164269 -1.8953e-05 0.12058 0 5.55112e-17 -0.0115373</pose>
-      <inertial>
-        <pose>-0.00522998 -0.0834811 0.0108422 0 0 0</pose>
-        <mass>0.0857896</mass>
-        <inertia>
-          <ixx>0.000259543</ixx>
-          <ixy>-4.20463e-06</ixy>
-          <ixz>9.18286e-07</ixz>
-          <iyy>0.000134353</iyy>
-          <iyz>-1.37928e-05</iyz>
-          <izz>0.000284981</izz>
-        </inertia>
-      </inertial>
-      <collision name='collision'>
-        <pose>-0.00164 -0.07024 0.01366 1.5707 0 0</pose>
-        <geometry>
-          <cylinder>
-            <radius>0.037035</radius>
-            <length>0.15849</length>
-          </cylinder>
-        </geometry>
-        <surface>
-          <contact>
-            <ode>
-              <kp>100000</kp>
-              <kd>10</kd>
-              <max_vel>0.1</max_vel>
-              <min_depth>0.0015</min_depth>
-            </ode>
-          </contact>
-        </surface>
-      </collision>
-      <visual name='visual'>
-        <geometry>
-          <mesh>
-            <uri>model://mpl_right_arm/meshes/humerus.stl</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <script>
-            <name>Gazebo/FlatBlack</name>
-          </script>
-        </material>
-      </visual>
-    </link>
-
-    <link name='elbow'>
-      <pose>-0.00172823 -0.150057 0.134471 -1.21278e-13 1.94289e-16 -0.0115373</pose>
-      <inertial>
-        <pose>0.00116385 -0.0740893 -0.0073153 0 0 0</pose>
-        <mass>0.0351897</mass>
-        <inertia>
-          <ixx>0.000106583</ixx>
-          <ixy>-5.90862e-06</ixy>
-          <ixz>-2.34382e-06</ixz>
-          <iyy>3.29639e-05</iyy>
-          <iyz>1.56515e-05</iyz>
-          <izz>0.000106705</izz>
-        </inertia>
-      </inertial>
-      <collision name='collision'>
-        <pose>0 -0.05957 0.00147 1.5707 0 0</pose>
-        <geometry>
-          <cylinder>
-            <radius>0.03447</radius>
-            <length>0.11914</length>
-          </cylinder>
-        </geometry>
-        <surface>
-          <contact>
-            <ode>
-              <kp>100000</kp>
-              <kd>10</kd>
-              <max_vel>0.1</max_vel>
-              <min_depth>0.0015</min_depth>
-            </ode>
-          </contact>
-        </surface>
-      </collision>
-      <collision name='collision_1'>
-        <pose>0.00997 -0.1445 -0.0245 0 0 0</pose>
-        <geometry>
-          <cylinder>
-            <radius>0.036</radius>
-            <length>0.018</length>
-          </cylinder>
-        </geometry>
-        <surface>
-          <contact>
-            <ode>
-              <kp>100000</kp>
-              <kd>10</kd>
-              <max_vel>0.1</max_vel>
-              <min_depth>0.0015</min_depth>
-            </ode>
-          </contact>
-        </surface>
-      </collision>
-
-      <visual name='visual'>
-        <geometry>
-          <mesh>
-            <uri>model://mpl_right_arm/meshes/elbow.stl</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <ambient>0.2 0.2 0.2 1</ambient>
-          <diffuse>0.8 0.8 0.8 1</diffuse>
-          <specular>0.9 0.9 0.9 1</specular>
-        </material>
-      </visual>
-    </link>
-
     <link name='forearm'>
       <pose>0.00660504 -0.294573 0.119123 -1.21334e-13 2.77556e-17 -0.0115373</pose>
       <inertial>
@@ -293,9 +114,9 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>0.2 0.2 0.2 1</ambient>
-          <diffuse>0.8 0.8 0.8 1</diffuse>
-          <specular>0.9 0.9 0.9 1</specular>
+          <script>
+            <name>Gazebo/FlatBlack</name>
+          </script>
         </material>
       </visual>
       <sensor name='wristy_contact_sensor' type='contact'>
@@ -384,9 +205,9 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>0.2 0.2 0.2 1</ambient>
-          <diffuse>0.8 0.8 0.8 1</diffuse>
-          <specular>0.9 0.9 0.9 1</specular>
+          <script>
+            <name>Gazebo/FlatBlack</name>
+          </script>
         </material>
       </visual>
       <sensor name='wristx_contact_sensor' type='contact'>
@@ -457,9 +278,9 @@
           </mesh>
         </geometry>
         <material>
-          <ambient>0.2 0.2 0.2 1</ambient>
-          <diffuse>0.8 0.8 0.8 1</diffuse>
-          <specular>0.9 0.9 0.9 1</specular>
+          <script>
+            <name>Gazebo/FlatBlack</name>
+          </script>
         </material>
       </visual>
       <visual name='visual_palm'>
@@ -1876,67 +1697,9 @@
       </sensor>
     </link>
 
-    <joint name='humerus' type='revolute'>
-      <child>humerus</child>
-      <parent>shoulder</parent>
-      <axis>
-        <xyz>0.999933 -0.011537 -5.55112e-17</xyz>
-        <limit>
-          <lower>-3.14</lower>
-          <upper>0.345</upper>
-          <effort>10000</effort>
-          <velocity>0.5</velocity>
-        </limit>
-        <dynamics>
-          <damping>5</damping>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-      <physics>
-        <provide_feedback>1</provide_feedback>
-        <ode>
-          <implicit_spring_damper>1</implicit_spring_damper>
-          <cfm_damping>1</cfm_damping>
-          <limit>
-            <cfm>0.01</cfm>
-            <erp>0</erp>
-          </limit>
-        </ode>
-      </physics>
-    </joint>
-
-    <joint name='elbow' type='revolute'>
-      <child>elbow</child>
-      <parent>humerus</parent>
-      <axis>
-        <xyz>0.011537 0.999933 -1.21278e-13</xyz>
-        <limit>
-          <lower>-0.697</lower>
-          <upper>1.57</upper>
-          <effort>10000</effort>
-          <velocity>0.5</velocity>
-        </limit>
-        <dynamics>
-          <damping>5</damping>
-        </dynamics>
-        <use_parent_model_frame>1</use_parent_model_frame>
-      </axis>
-      <physics>
-        <provide_feedback>1</provide_feedback>
-        <ode>
-          <implicit_spring_damper>1</implicit_spring_damper>
-          <cfm_damping>1</cfm_damping>
-          <limit>
-            <cfm>0.01</cfm>
-            <erp>0</erp>
-          </limit>
-        </ode>
-      </physics>
-    </joint>
-
     <joint name='forearm' type='revolute'>
       <child>forearm</child>
-      <parent>elbow</parent>
+      <parent></parent>
       <axis>
         <xyz>1.42759e-15 1.21326e-13 1</xyz>
         <limit>
