@@ -73,7 +73,10 @@ fast_food
 fire_hose_long
 fire_hose_long_curled
 fire_hydrant
+first_2015_trash_can
+frc_field_2015
 gas_station
+grey_tote
 grey_wall
 ground_plane
 hammer
