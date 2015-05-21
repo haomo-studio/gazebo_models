@@ -80,7 +80,7 @@
       </inertial>
 
       <collision name="collision">
-        <geometry>-->
+        <geometry>
           <!-- In case a simple shape is preferred -->
           <!--box><size>0.05 0.14 2.21</size></box>-->
           <mesh>
