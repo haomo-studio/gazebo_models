@@ -16,6 +16,7 @@ set (dirs
 asphalt_plane
 ball_bearing
 beer
+block
 bookshelf
 bowl
 breakable_test
@@ -27,6 +28,7 @@ camera
 cart_front_steer
 cart_rigid_suspension
 cart_soft_suspension
+checkerboard
 cinder_block
 cinder_block_2
 cinder_block_wide
@@ -90,6 +92,9 @@ irobot_hand
 iss
 iss_half
 jersey_barrier
+juggler_schaal
+juggler_schaal_platform
+juggler_wedge
 kinect
 kitchen_dining
 ladder_60deg_0rails
@@ -116,6 +121,7 @@ nist_simple_ramp_120
 nist_stairs_120
 office_building
 osrf_elevator
+passive_dynamic_walker
 pioneer2dx
 pioneer3at
 plastic_cup
@@ -138,6 +144,7 @@ robonaut
 round_tin_base
 round_tin_top
 saucepan
+schunk_mpg_80
 simple_arm
 simple_arm_gripper
 simple_gripper
@@ -154,6 +161,7 @@ tube_2_25cm
 tube_9_5mm
 turtlebot
 ur10
+ur10_plus_schunk_mpg_80
 utility_cart
 vrc_driving_terrain
 washer
