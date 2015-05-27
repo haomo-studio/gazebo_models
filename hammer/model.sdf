@@ -3,7 +3,6 @@
   <model name="hammer">
     <link name="link">
       <!--
-      <pose>0 0 0 0 0 0</pose>
 
       <collision name="shaft">
         <geometry>
@@ -23,6 +22,19 @@
         </geomtry>
       </collision>
 -->
+      <inertial>
+        <pose>0 -0.05 0 0 0 0</pose>
+        <mass>0.7</mass>
+        <inertia>
+          <ixx>0.007</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0035</iyy>
+          <iyz>0</iyz>
+          <izz>0.007</izz>
+        </inertia>
+      </inertial>
+
       <collision name="collision">
         <geometry>
           <mesh>
