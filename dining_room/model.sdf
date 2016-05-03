@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="Dining room">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <cast_shadows>0</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://dining_room/meshes/dining_room.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <collision name='collision'>
+        <pose>-0.200583 -0.248405 0.3 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>7.4422 4.31455 0.021895</size>
+          </box>
+        </geometry>
+      </collision>
+
+    </link>
+  </model>
+</sdf>
