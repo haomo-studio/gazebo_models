@@ -169,6 +169,7 @@ submarine_sinking
 sun
 table
 table_marble
+textured_shapes
 tube_2_25cm
 tube_9_5mm
 turtlebot
