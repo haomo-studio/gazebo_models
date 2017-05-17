@@ -16,6 +16,7 @@ set (dirs
 apollo15_landing_site_1000x1000
 arm_part
 arrow_red
+asus_xtion_pro_camera
 asphalt_plane
 ball_bearing
 beer
@@ -28,6 +29,7 @@ brick_box_3x1x3
 cabinet
 cafe
 cafe_table
+calibration_plane
 camera
 car_wheel
 cardboard_box
@@ -35,6 +37,7 @@ cart_front_steer
 cart_rigid_suspension
 cart_soft_suspension
 cessna
+checkerboard_plane
 cinder_block
 cinder_block_2
 cinder_block_wide
@@ -83,6 +86,7 @@ drc_practice_white_jersey_barrier
 drc_practice_wood_slats
 drc_practice_yellow_parking_block
 dumpster
+euro_pallet
 fast_food
 fire_hose_long
 fire_hose_long_curled
@@ -117,6 +121,7 @@ house_1
 house_2
 house_3
 husky
+intel_realsense_r200
 iris_with_standoffs
 iris_with_standoffs_demo
 irobot_hand
@@ -159,6 +164,7 @@ number7
 number8
 number9
 office_building
+orbbec_astra_camera
 osrf_elevator
 parrot_bebop_2
 person_standing
@@ -190,6 +196,7 @@ saucepan
 simple_arm
 simple_arm_gripper
 simple_gripper
+spectrum_plane
 speed_limit_sign
 src_doorway
 standpipe
