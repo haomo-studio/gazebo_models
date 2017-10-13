@@ -44,6 +44,9 @@ cinder_block_2
 cinder_block_wide
 cloverleaf_interchange
 coke_can
+collapsed_fire_station
+collapsed_industrial
+collapsed_police_station
 construction_barrel
 construction_cone
 control_console
@@ -170,6 +173,8 @@ number9
 office_building
 orbbec_astra_camera
 osrf_elevator
+osrf_first_office
+parking_garage
 parrot_bebop_2
 person_standing
 person_walking
