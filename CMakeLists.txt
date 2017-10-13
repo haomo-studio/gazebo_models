@@ -44,6 +44,10 @@ cinder_block_2
 cinder_block_wide
 cloverleaf_interchange
 coke_can
+collapsed_fire_station
+collapsed_house
+collapsed_industrial
+collapsed_police_station
 construction_barrel
 construction_cone
 control_console
@@ -170,9 +174,12 @@ number9
 office_building
 orbbec_astra_camera
 osrf_elevator
+osrf_first_office
+parking_garage
 parrot_bebop_2
 person_standing
 person_walking
+pine_tree
 pioneer2dx
 pioneer3at
 piston_rod_part
@@ -200,6 +207,7 @@ round_tin_base
 round_tin_top
 salon
 saucepan
+school
 simple_arm
 simple_arm_gripper
 simple_gripper
