@@ -174,6 +174,7 @@ number9
 office_building
 orbbec_astra_camera
 osrf_elevator
+osrf_first_office
 parking_garage
 parrot_bebop_2
 person_standing
@@ -204,6 +205,7 @@ round_tin_base
 round_tin_top
 salon
 saucepan
+school
 simple_arm
 simple_arm_gripper
 simple_gripper
