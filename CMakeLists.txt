@@ -114,6 +114,7 @@ gear_part
 gimbal_small_2d
 grey_tote
 grey_wall
+grocery_store
 ground_plane
 hammer
 hinged_door
@@ -139,6 +140,7 @@ ladder_75deg_0rails
 ladder_75deg_1rails
 ladder_75deg_2rails
 lamp_post
+law_office
 lunar_tranquillitatis_pit
 mailbox
 marble_1_5cm
@@ -179,6 +181,7 @@ plastic_cup
 polaris_ranger_ev
 polaris_ranger_xp900
 polaris_ranger_xp900_no_roll_cage
+police_station
 powerplant
 pr2
 pr2_gripper
@@ -195,6 +198,7 @@ robocup_spl_ball
 robonaut
 round_tin_base
 round_tin_top
+salon
 saucepan
 simple_arm
 simple_arm_gripper
@@ -216,6 +220,7 @@ t_brace_part
 table
 table_marble
 textured_shapes
+thrift_shop
 tube_2_25cm
 tube_9_5mm
 turtlebot
