@@ -99,6 +99,7 @@ fire_hydrant
 fire_station
 first_2015_trash_can
 follower_vehicle
+fountain
 frc_field_2015
 frc2016_ball
 frc2016_chevaldefrise
@@ -232,6 +233,8 @@ table
 table_marble
 textured_shapes
 thrift_shop
+tower_crane
+truss_bridge
 tube_2_25cm
 tube_9_5mm
 turtlebot
