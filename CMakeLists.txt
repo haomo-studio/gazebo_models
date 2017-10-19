@@ -114,6 +114,7 @@ frc2016_roughterrain
 frc2016_sallyport
 gas_station
 gasket_part
+gazebo
 gear_part
 gimbal_small_2d
 grey_tote
@@ -192,6 +193,7 @@ polaris_ranger_ev
 polaris_ranger_xp900
 polaris_ranger_xp900_no_roll_cage
 police_station
+postbox
 post_office
 powerplant
 pr2
