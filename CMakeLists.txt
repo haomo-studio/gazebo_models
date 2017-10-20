@@ -125,6 +125,9 @@ grey_wall
 grocery_store
 ground_plane
 hammer
+hatchback
+hatchback_blue
+hatchback_red
 hinged_door
 hokuyo
 hoop_red
@@ -203,6 +206,7 @@ powerplant
 pr2
 pr2_gripper
 prius_hybrid
+prius_hybrid_sensors
 pulley_part
 quadrotor
 radio_tower
